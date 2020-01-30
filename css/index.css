@@ -300,8 +300,8 @@ ul.facts-list {
 
 .sect2 {
     border-bottom: 1px solid #999999;
-    margin-top: 33px;
-    height: 188px;
+    padding: 33px 0;
+    /* height: 188px; */
 }
 
 section h3 {
@@ -354,8 +354,9 @@ address span {
     }
     nav,
     section {
+        ight: 188px;
         width: 100%;
-        display: grid;
+        display: wrap;
         text-align: center;
         background-color: gold;
     }
@@ -372,14 +373,19 @@ address span {
         background: blue url('../design-files/mobile-view.png') center top;
     }
     .logo {
-        z-index: 2;
+        z-index: 10;
+        position: abosolute;
+        left: 33%;
+        top: 0;
     }
     nav,
     section {
         width: 100%;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         background-color: violet;
+        height: auto;
     }
     nav a {
         margin: 0px;
@@ -400,13 +406,20 @@ address span {
         margin: 20px 0;
     }
     .sect1 .blurbs,
-    .sect2 .blurbs {
+    .sect2 .blurbs,
+    .sect3 address {
         width: 95%;
-        padding: 36px;
+        height: 100%;
+        padding: 30px;
         text-align: left;
+        flex-grow: 1;
     }
     address {
-        display: grid;
+        display: inline-table;
+        height: auto;
+        width: auto;
+        margin: 0;
+        ;
     }
 }
 
